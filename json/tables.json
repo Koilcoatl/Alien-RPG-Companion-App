@@ -1,0 +1,70 @@
+{
+
+    "Critical Injuries":{
+        "11": ["Winded", ["Not Fatal"], "null", "No Effect", ["None"], "null"],
+        "12": ["Stunned", ["Not Fatal"], "null", "No Effect", ["None"], "null"],
+        "13": ["Crippling Pain", ["Not Fatal"], "null", "STRESS LEVEL increases one step", [["Stress"], 1], "null"],
+        "14": ["Sprained Ankle", ["Not Fatal"], "null", "MOBILITY -2 and can't run until MEDICAL AID roll is made", [["Mobility"], -2], "null"],
+        "15": ["Blood in Eyes", ["Not Fatal"], "null", "OBSERVATION and RANGED COMBAT -2 until MEDICAL AID roll is made", [["Observation", "Ranged Combat"], -2], "null"],
+        "16": ["Concussion", ["Not Fatal"], "null", "MOBILITY -2",[["Mobility"], -2], "1D6"],
+        "21": ["Severed Ear", ["Not Fatal"], "null", "OBSERVATION -2",[["Observaion"], -2], "1D6"],
+        "22": ["Broken Toes", ["Not Fatal"], "null", "To run becomes a slow action", ["None"], "1D6"],
+        "23": ["Broken Hand", ["Not Fatal"], "null", "Can't use hand", ["None"], "1D6"],
+        "24": ["Knocked Out Teeth", ["Not Fatal"], "null", "MANIPULATION -2", [["Manipulation"], -2], "1D6"],
+        "25": ["Impaled Thigh", ["Not Fatal"], "null", "To run becomes a slow action.", ["None"], "2D6"],
+        "26": ["Slashed Shoulder", ["Not Fatal"], "null", "Can't use arm", ["None"], "1D6"],
+        "31": ["Broken Nose", ["Not Fatal"], "null", "MANIPULATION and OBSERVATION -1", [["Manipulation","Observation"], -1], "1D6"],
+        "32": ["Crotch Hit", ["Not Fatal"], "null", "One point of damage at every roll for MOBILITY and CLOSE COMBAT", ["None"], "1D6"],
+        "33": ["Broken Ribs", ["Not Fatal"], "null", "MOBILITY and CLOSE COMBAT -2", [["Mobility","Close Combat"], -2], "2D6"],
+        "34": ["Gouged Eye", ["Not Fatal"], "null", "RANGED COMBAT and OBSERVATION -2", [["Ranged Combat","Observation"], -2], "2D6"],
+        "35": ["Busted Kneecap", ["Not Fatal"], "null", "Can't run, only crawl", ["None"], "2D6"],
+        "36": ["Broken Arm", ["Not Fatal"], "null", "Can't use arm", ["None"], "2D6"],
+        "41": ["Broken Leg", ["Not Fatal"], "null", "Can't run, only crawl", ["None"], "2D6"],
+        "42": ["Crushed Foot", ["Not Fatal"], "null", "Can't run, only crawl", ["None"], "3D6"],
+        "43": ["Crushed Elbow", ["Not Fatal"], "null", "Can't use arm", ["None"], "3D6"],
+        "44": ["Punctured Lung", ["Fatal", 0], "One Day", "STAMINA and MOBILITY -2", [["Stamina","Mobility"], -2], "1D6"],
+        "45": ["Bleeding Gut", ["Fatal", 0], "One Shift", "One point of damage at every roll for MOBILITY and CLOSE COMBAT", ["None"], "1D6"],
+        "46": ["Ruptured Intestines", ["Fatal", 0], "One Shift", "Disease with Virulence 6", ["None"], "2D6"],
+        "51": ["Busted Kidney", ["Fatal", 0], "One Day", "Can't run, only crawl, MOBILITY -2", [["Mobility"], -2], "2D6"],
+        "52": ["Arm Artery Cut", ["Fatal", -1], "One Turn", "Can't use arm", ["None"], "1D6"],
+        "53": ["Leg Artery Cut", ["Fatal", -1], "One Turn", "To run becomes a slow action", ["None"], "1D6"],
+        "54": ["Severed Arm", ["Fatal", -1], "One Shift", "Can't use arm", ["None"], "Permanent"],
+        "55": ["Severed Leg", ["Fatal", -1], "One Shift", "Can't run, only crawl", ["None"], "Permanent"],
+        "56": ["Cracked Spine", ["Not Fatal"], "null", "Paralyzed from the neck down. If not given MEDICAL AID in time, the effect is permanent", ["None"], "3D6"],
+        "61": ["Ruptured Jugular", ["Fatal", -1], "One Round", "STAMINA -1", [["Stamina"], -1], "2D6"],
+        "62": ["Ruptured Aorta", ["Fatal", -2], "One Round", "STAMINA -2", [["Stamina"], -2], "3D6"],
+        "63": ["Disembowled", ["Fatal", 0], "null", "Instant Death", ["None"], "Permanent"],
+        "64": ["Crushed Skull", ["Fatal", 0], "null", "Your story ends here", ["None"], "Permanent"],
+        "65": ["Pierced Head", ["Fatal", 0], "null", "You die immediately", ["None"], "Permanent"],
+        "66": ["Impaled Heart", ["Fatal", 0], "null", "Your heart beats for the last time", ["None"], "Permanent"]
+    },
+    "Synth Injuries":{
+        "1":["Ruptured Fluid Pump", "The android loses it's next slow action"],
+        "2":["Destroyed Leg Servos", "Both legs are non-functional.  The android must stay prone and can only crawl"],
+        "3":["Destroyed Arm Servos", "One arm is non-functional.  The android can only use one-handed gear"],
+        "4":["Head Dislocation", "The android's artificial neck is severely fractured and its head placed in an unnatural position.  All fast actions become slow actions"],
+        "5":["Severe Chassis Breach", "Internal organs spill out and the android is completely immobilized"],
+        "6":["System Shutdown", "The android is torn to shreds or crushed.  Core systems are severely damaged and a COMTECH roll is required to communicate with the android"]
+    },
+    "Mental Trauma":{     
+        "1":["Phobia", "You are terrified by something related to what caused you to panic.\nThe GM decides what it is. Your STRESS LEVEL increases by one when within SHORT range of the object of your phobia.\nIf you stay close to it for more than a single round, make a Panic Roll"],
+        "2":["Alcoholism", "You must drink alcohol every Shift, or your STRESS LEVEL increases by one.\nYou cannot relieve stress (see page 104) without drinking alcohol"],
+        "3":["Nightmares", "Make an EMPATHY roll when you sleep. If the roll succeeds,\nyou have a horrible nightmare and your STRESS LEVEL Increases by one.\nYou cannot relieve stress for a full day after such a nightmare"],
+        "4":["Depression", "You are prone to episodes of depression and moodiness. Every day, make an EMPATHY roll-if you fail,\nyou're having a bad day. Your STRESS LEVEL Increases by one and you can't relieve stress until the next day"],
+        "5":["Drug Use", "You must use some form of recreational drug (see page 137) every Shift, or your STRESS LEVEL increases by one.\nYou cannot relieve stress (see page 104) without consuming your drug of choice"],
+        "6":["Amnesia", "Your memory is a blank slate. You can no longer recall who you or the other characters are.\nThe effect should be roleplayed"]
+    },
+    "Panic Roll":{
+        "6":["Keeping It Together", "You manage to keep your nerves in check. Barely"],
+        "7":["Nervous Twitch", "Your STRESS LEVEL, and the STRESS LEVEL of all friendly PCs in SHORT range of you, increases by one"],
+        "8":["Tremble","Your STRESS LEVEL, and the STRESS LEVEL of all friendly PCs in SHORT range of you, increases by one"],
+        "9":["Drop Item", "Whether by stress, confusion of the realization that you're all going to die anyway,\nyou drop a weapon or other important item-the GM decides which one. Your STRESS LEVEL Increases by one."],
+        "10":["Freeze", "You're frozen by fear or stress for one Round, losing your next slow action.\nYour STRESS LEVEL, and the STRESS LEVEL of all friendly PCs In SHORT range of you, Increases by one"],
+        "11":["Seek Cover", "You must use your next action to move away from danger and find a safe spot if possible.\nYou are allowed to make a retreat roll (see page 93) if you have an enemy at ENGAGED range.\nYour STRESS LEVEL is decreased by one, but the STRESS LEVEL OF all friendly PCs in SHORT range increases by one.\nAfter one Round, you can act normally"],
+        "12":["Scream", "You scream your lungs out for one Round, losing your next slow action.\nYour STRESS LEVEL IS decreased by one, but every friendly character who\nhears your scream must make an immediate Panic Roll"],
+        "13":["Flee","You just can't take it anymore. You must flee to a safe place and refuse to leave it.\nYou won't attack anyope and won't attempt anything dangerous. You are not allowed to make a retreat roll (see page 93) \nif you have an enemy at ENGAGED range when you flee. Your STRESS LEVEL is decreased by one,\nbut every friendly character who sees you run must make an immediate Panic Roll"],
+        "14":["Berserk", "You must immediately attack the nearest person or creature, friendly or not.\nYou won't stop until you or the target is Broken.\nEvery friendly character who witnesses your rampage must make an immediate Panic Roll"],
+        "15":["Catatonic","You collapse to the floor and can't talk or move, staring blankly into oblivion"]
+    }
+
+}

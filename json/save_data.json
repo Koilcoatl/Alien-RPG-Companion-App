@@ -1,1 +1,35 @@
-{"null": "No active party selected", "Crew 01": [["Calvin", "Human", 0], ["Ned", "Human", 0], ["Deborah", "Human", 0], ["Palco", "Synth", 0]]}
+{
+    "null": "No active party selected",
+    "The Pericles": [
+        [
+            "Maud",
+            "Human",
+            0
+        ],
+        [
+            "AI-AN",
+            "Synth",
+            0
+        ],
+        [
+            "Shea",
+            "Human",
+            0
+        ],
+        [
+            "Cooper",
+            "Synth",
+            0
+        ],
+        [
+            "Phillip",
+            "Human",
+            0
+        ],
+        [
+            "Orian",
+            "Human",
+            0
+        ]
+    ]
+}

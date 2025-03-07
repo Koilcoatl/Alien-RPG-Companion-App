@@ -1,0 +1,439 @@
+{
+    "Null": "No Character Sheet on File",
+    "Micah": {
+        "Name": "Micah",
+        "Job": "Colonial Marshal",
+        "Race": "Human",
+        "Strength": 4,
+        "Agility": 4,
+        "Wits": 6,
+        "Empathy": 5,
+        "Close Combat": 1,
+        "Heavy Machinery": 1,
+        "Stamina": 1,
+        "Ranged Combat": "3",
+        "Mobility": 3,
+        "Piloting": 1,
+        "Observation": "3",
+        "Survival": 1,
+        "Comtech": 1,
+        "Command": 1,
+        "Manipulation": "3",
+        "Medical Aid": 2,
+        "Talents": [
+            "Investigator",
+            "Talented"
+        ],
+        "Health": 1,
+        "Max Health": 4,
+        "Stress": 8,
+        "Gear": [
+            [
+                ".357 Magnum Revolver",
+                "5.0"
+            ],
+            [
+                "Binoculars",
+                "0.5"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ]
+        ],
+        "Encumbrance": 8,
+        "Armor": [
+            "",
+            "0"
+        ],
+        "Weapons": {
+            "0": [
+                "Pistol",
+                "+1",
+                "",
+                ""
+            ],
+            "1": [
+                "Hvy Machinegun",
+                "+2",
+                "",
+                ""
+            ],
+            "2": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "3": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "Cash": 1000209,
+        "Consumables": {
+            "Air": 2,
+            "Food": 4,
+            "Water": 0,
+            "Power": 0
+        },
+        "Radiation": 9,
+        "Permanent Radiation": 9,
+        "Critical Injuries": {
+            "54": [
+                "Severed Arm",
+                [
+                    "Fatal",
+                    -1
+                ],
+                "One Shift",
+                "Can't use arm",
+                [
+                    "None"
+                ],
+                "Permanent"
+            ],
+            "13": [
+                "Crippling Pain",
+                [
+                    "Not Fatal"
+                ],
+                "null",
+                "STRESS LEVEL increases one step",
+                [
+                    [
+                        "Stress"
+                    ],
+                    1
+                ],
+                "null"
+            ],
+            "42": [
+                "Crushed Foot",
+                [
+                    "Not Fatal"
+                ],
+                "null",
+                "Can't run, only crawl",
+                [
+                    "None"
+                ],
+                11
+            ]
+        },
+        "Conditions": {
+            "Starving": false,
+            "Dehydrated": false,
+            "Exhausted": false,
+            "Freezing": false,
+            "Drowning": false,
+            "Suffocating": false,
+            "Sick": false
+        },
+        "Personal Agenda": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "Buddy": "",
+        "Rival": "",
+        "Signature Item": "",
+        "Experience Points": 0,
+        "Notes": "Amnesia: Your memory is a blank slate. You can no longer recall who you or the other characters are.\nThe effect should be roleplayed\n\n\n",
+        "Panic": 12
+    },
+    "Cass": {
+        "Name": "Cass",
+        "Job": "Colonial Marshal",
+        "Race": "Synth",
+        "Strength": 5,
+        "Agility": 4,
+        "Wits": 8,
+        "Empathy": 2,
+        "Close Combat": 2,
+        "Heavy Machinery": 1,
+        "Stamina": 1,
+        "Ranged Combat": "3",
+        "Mobility": 1,
+        "Piloting": 1,
+        "Observation": "3",
+        "Survival": 0,
+        "Comtech": 0,
+        "Command": 0,
+        "Manipulation": "3",
+        "Medical Aid": "1",
+        "Talents": [],
+        "Health": 0,
+        "Max Health": 5,
+        "Stress": 0,
+        "Gear": [
+            [
+                ".357 Magnum Revolver",
+                "Set"
+            ],
+            [
+                "Personal Medkit",
+                "Set"
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ]
+        ],
+        "Encumbrance": 10,
+        "Armor": [
+            "",
+            "0"
+        ],
+        "Weapons": {
+            "0": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "1": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "2": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "3": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "Cash": 600,
+        "Consumables": {
+            "Air": 0,
+            "Food": 0,
+            "Water": 0,
+            "Power": 0
+        },
+        "Radiation": 1,
+        "Permanent Radiation": 1,
+        "Critical Injuries": {},
+        "Conditions": {
+            "Starving": false,
+            "Dehydrated": false,
+            "Exhausted": false,
+            "Freezing": false,
+            "Drowning": false,
+            "Suffocating": false,
+            "Sick": false
+        },
+        "Personal Agenda": "Stupid\n",
+        "Buddy": "Buddy",
+        "Rival": "Micah",
+        "Signature Item": "",
+        "Experience Points": 0,
+        "Notes": "Severe Chassis Breach: (I)Internal organs spill out and the android is completely immobilized\n",
+        "Panic": 0
+    },
+    "Maud": {
+        "Name": "Maud",
+        "Job": "Officer",
+        "Race": "Human",
+        "Strength": 4,
+        "Agility": 2,
+        "Wits": 3,
+        "Empathy": 5,
+        "Close Combat": 1,
+        "Heavy Machinery": 0,
+        "Stamina": 0,
+        "Ranged Combat": "3",
+        "Mobility": 0,
+        "Piloting": 0,
+        "Observation": 0,
+        "Survival": 0,
+        "Comtech": 0,
+        "Command": "3",
+        "Manipulation": "3",
+        "Medical Aid": "1",
+        "Talents": [
+            "Influence",
+            "Talent"
+        ],
+        "Health": 0,
+        "Max Health": 4,
+        "Stress": 6,
+        "Gear": [
+            [
+                "M4A3 Service Pistol",
+                "7.5"
+            ],
+            [
+                "Seegson P-DAT",
+                "0.5"
+            ],
+            [
+                "assasdasd",
+                "2.0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ],
+            [
+                "",
+                "0"
+            ]
+        ],
+        "Encumbrance": 8,
+        "Armor": [
+            "Suit",
+            "5"
+        ],
+        "Weapons": {
+            "0": [
+                "Pistol",
+                "+2",
+                "1",
+                "Medium"
+            ],
+            "1": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "2": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "3": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "Cash": 100900,
+        "Consumables": {
+            "Air": 2,
+            "Food": 0,
+            "Water": 0,
+            "Power": 0
+        },
+        "Radiation": 0,
+        "Permanent Radiation": 0,
+        "Critical Injuries": {
+            "61": [
+                "Ruptured Jugular",
+                [
+                    "Fatal",
+                    -1
+                ],
+                "One Round",
+                "STAMINA -1",
+                [
+                    [
+                        "Stamina"
+                    ],
+                    -1
+                ],
+                "2D6"
+            ]
+        },
+        "Conditions": {
+            "Starving": false,
+            "Dehydrated": false,
+            "Exhausted": false,
+            "Freezing": false,
+            "Drowning": false,
+            "Suffocating": false,
+            "Sick": false
+        },
+        "Personal Agenda": "\n",
+        "Buddy": "",
+        "Rival": "",
+        "Signature Item": "asasas",
+        "Experience Points": 0,
+        "Notes": "\n",
+        "Panic": 0
+    }
+}

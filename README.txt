@@ -1,3 +1,22 @@
+The Alien RPG Companion App Ver 1.1.0 - by Micah Popp - 2024
+
+Hello again!  this latest installment was a greater undertaking than previously expected!  What I imagined I could do in a week took me 136 hours!  lol
+Never the less, here are the changes - mostly just added an interactive character sheet
+
+--CHANGELOG--
+Changed Font to Courier New for greater accessibility
+Added Charater Sheets with full integration
+Added timestamp proof for rolls
+Added Roll Pushing
+Added Critical Injuries
+Added Panic Rolls
+Added Mental Trauma Rolls
+
+
+------------------------------------
+
+
+
 The Alien RPG Companion App Ver 1.0.0 - by Micah Popp - 2024
 
 First of all I want to say thank you for downloading my program!
