@@ -1,0 +1,129 @@
+{
+    "Null": "No Character Sheet on File",
+    "Micah": {
+        "Name": "Micah",
+        "Job": "Colonial Marine",
+        "Race": "Human",
+        "Strength": 5,
+        "Agility": 4,
+        "Wits": 3,
+        "Empathy": 2,
+        "Close Combat": "3",
+        "Heavy Machinery": 0,
+        "Stamina": "3",
+        "Ranged Combat": "3",
+        "Mobility": 0,
+        "Piloting": 0,
+        "Observation": "1",
+        "Survival": 0,
+        "Comtech": 0,
+        "Command": 0,
+        "Manipulation": 0,
+        "Medical Aid": 0,
+        "Gear": [
+            [
+                "M41A Pulse Rifle",
+                "Set"
+            ],
+            [
+                "IRC MK.35 Pressure Suit",
+                "Set"
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ],
+            [
+                "",
+                0
+            ]
+        ],
+        "Cash": 400,
+        "Health": 5,
+        "Max Health": 5,
+        "Stress": 0,
+        "Radiation": 0,
+        "Permanent Radiation": 0,
+        "Personal Agenda": "",
+        "Buddy": "",
+        "Rival": "",
+        "Critical Injuries": {},
+        "Conditions": {
+            "Starving": false,
+            "Dehydrated": false,
+            "Exhausted": false,
+            "Freezing": false,
+            "Drowning": false,
+            "Suffocating": false,
+            "Sick": false
+        },
+        "Consumables": {
+            "Air": 0,
+            "Food": 0,
+            "Water": 0,
+            "Power": 0
+        },
+        "Armor": [
+            "",
+            0
+        ],
+        "Weapons": {
+            "0": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "1": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "2": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "3": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "Encumbrance": 10,
+        "Talents": [
+            "Overkill"
+        ],
+        "Signature Item": "",
+        "Experience Points": 0,
+        "Notes": "",
+        "Panic": 0
+    }
+}
