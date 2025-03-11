@@ -6,6 +6,7 @@ import random
 import pygame
 import threading
 import os
+import sys
 import datetime
 
 class App:
@@ -23,6 +24,12 @@ class App:
         master.minsize(640,480)
         master.config(bg = aBlack)
 
+        if getattr(sys, 'frozen', False):
+            application_path = os.path.dirname(sys.executable)
+        elif __file__:
+            application_path = os.path.dirname(__file__)
+
+        os.chdir(application_path)
     #region Global Styles
         self.style = ttk.Style()
 
@@ -123,20 +130,20 @@ class App:
 
         ch_skill_img = PhotoImage(file = image_root + 'ch_skill_img.png')
 
-        death_bt_active = PhotoImage(file = image_root + 'death_bt_active.png')
-        death_bt_inactive = PhotoImage(file = image_root + 'death_bt_inactive.png')
-        panic_bt_active = PhotoImage(file = image_root + 'panic_bt_active.png')
-        panic_bt_inactive = PhotoImage(file = image_root + 'panic_bt_inactive.png')
-        end_panic_bt_active = PhotoImage(file = image_root + 'end_panic_bt_active.png')
-        end_panic_bt_inactive = PhotoImage(file = image_root + 'end_panic_bt_inactive.png')
-        push_bt_active = PhotoImage(file = image_root + 'push_bt_active.png')
-        push_bt_inactive = PhotoImage(file = image_root + 'push_bt_inactive.png')
-        resus_bt_active = PhotoImage(file = image_root + 'resus_bt_active.png')
-        resus_bt_inactive = PhotoImage(file = image_root + 'resus_bt_inactive.png')
-        trauma_bt_active = PhotoImage(file = image_root + 'trauma_bt_active.png')
-        trauma_bt_inactive = PhotoImage(file = image_root + 'trauma_bt_inactive.png')
-        inj_bt_active = PhotoImage(file = image_root + 'inj_bt_active.png')
-        inj_bt_inactive = PhotoImage(file = image_root + 'inj_bt_inactive.png')
+        death_bt_active = PhotoImage(file = image_root + 'death_bt_active2.png')
+        death_bt_inactive = PhotoImage(file = image_root + 'death_bt_inactive2.png')
+        panic_bt_active = PhotoImage(file = image_root + 'panic_bt_active2.png')
+        panic_bt_inactive = PhotoImage(file = image_root + 'panic_bt_inactive2.png')
+        end_panic_bt_active = PhotoImage(file = image_root + 'end_panic_bt_active2.png')
+        end_panic_bt_inactive = PhotoImage(file = image_root + 'end_panic_bt_inactive2.png')
+        push_bt_active = PhotoImage(file = image_root + 'push_bt_active2.png')
+        push_bt_inactive = PhotoImage(file = image_root + 'push_bt_inactive2.png')
+        resus_bt_active = PhotoImage(file = image_root + 'resus_bt_active2.png')
+        resus_bt_inactive = PhotoImage(file = image_root + 'resus_bt_inactive2.png')
+        trauma_bt_active = PhotoImage(file = image_root + 'trauma_bt_active2.png')
+        trauma_bt_inactive = PhotoImage(file = image_root + 'trauma_bt_inactive2.png')
+        inj_bt_active = PhotoImage(file = image_root + 'inj_bt_active2.png')
+        inj_bt_inactive = PhotoImage(file = image_root + 'inj_bt_inactive2.png')
 
 
 
@@ -157,7 +164,6 @@ class App:
         ttk.Button(top_menu, style = 'Alien.TButton', text = '  Motion Tracker  ', command = lambda: mt_start()).place(relx = 0.3, rely = 0.69, anchor = 'center')
         ttk.Button(top_menu, style = 'Alien.TButton', text = '   Dice  Roller   ', command = lambda: dr_start()).place(relx = 0.7, rely = 0.69, anchor = 'center')
         ttk.Button(top_menu, style = 'Alien.TButton', text = ' Character Sheets ', command = lambda: ch_start()).place(relx = 0.5, rely = 0.8, anchor = "center")
-        ttk.Button(top_menu, text = 'Shortcut', command = lambda: shortcut()).place(relx = 1, rely = 1, anchor = "se")
 
 #endregion
 
@@ -785,11 +791,6 @@ class App:
                 pass
     #endregion
 
-        def shortcut():
-            self.names_list = ['Micah']
-            open_char(0)
-
-
 ##--OPEN CHARACTER SHEET--##
         def open_char(num):
 
@@ -801,10 +802,15 @@ class App:
             with open('json\\character_sheets.json','r') as load_dict:
                 dict = json.load(load_dict)[name]
 
-            sheet = Toplevel(background=aBlack)
-            sheet.title(name)
-            sheet.geometry('1350x850+350+150')
-            sheet.resizable(False, False)
+            cs_top = Toplevel(background=aBlack)
+            cs_top.title(name)
+            cs_top.geometry('1354x754+350+150')
+            cs_top.resizable(True, True)
+            cs_top.minsize(width = 1354, height = 754)
+
+            sheet = ttk.Frame(cs_top, style = 'Alien.TFrame')
+            sheet.place(relx = 0.5, rely = 0.5, relheight=1, relwidth=1, anchor = 'center')
+            
 
             sheet_bg = ttk.Label(sheet, image = self.sheet_bg_normal)
             sheet_bg.place(x = 0, y = 0)
@@ -851,7 +857,7 @@ class App:
         #Make Stat Boxes
             def stat_box(key, type):
                 Stats[key][0] = ttk.Frame(sheet, style = 'Alien.TFrame')
-                ttk.Label(sheet, text = f'{key}', style = 'Inv.Alien.TLabel').place(x = Stats[key][2], y = Stats[key][3]-45, anchor = 'n')
+                ttk.Label(sheet, text = f'{key}', style = 'Inv.Alien.TLabel', font = ('Courier New', 10)).place(x = Stats[key][2], y = Stats[key][3]-45, anchor = 'n')
                 Stats[key][1] = ttk.Label(Stats[key][0], text = f'{dict[key]}', font = ('Courier New', 30, 'bold'), foreground = 'white', image=ch_skill_img, compound = 'center', background = aBlack)
                 if key not in ['Strength', 'Agility', 'Wits', 'Empathy']: 
                     ttk.Label(sheet, text = f'{dict[key]}', font = ('Courier New', 12), background = aBlack, foreground= 'white').place(x = Stats[key][2]-46, y = Stats[key][3]+14, anchor = 'center')
@@ -1131,6 +1137,8 @@ class App:
                 if death == True:
                     death_bt.config(image = death_bt_active)
                     death_bt.bind('<ButtonPress>', lambda event: rollqueue('Death', 'Death', mod = mod))
+                    
+                    sheet_bg.config(image = self.sheet_bg_death)
 
                     death_time.config(text = time)
                     death_freq.config(foreground='white')
@@ -1159,7 +1167,7 @@ class App:
             def pack_injuries():
                 for i, j in enumerate(self.injs):
                     INJS[i][0] = j
-                    INJS[i][1] = ttk.Entry(crit_frame, width = 20, style = 'Alien.TEntry', font = ('Courier New', 12))
+                    INJS[i][1] = ttk.Entry(crit_frame, width = 20, style = 'Alien.TEntry', font = ('Courier New', 11))
                     INJS[i][1].insert(0, self.injs[j][0])
                     INJS[i][1].config(state = DISABLED)
                     INJS[i][1].grid(row = i+1, column = 0, padx = 5)
@@ -1171,7 +1179,7 @@ class App:
 
                     #No recovery needed
                         if recov_num == 'null':
-                            INJS[i][2].config(text = 'Recover', command = lambda: heal_inj(i))
+                            INJS[i][2].config(text = 'Recover', command = lambda index = i: heal_inj(index))
 
                     #Permanent injuries have no recovery
                         elif recov_num == 'Permanent':
@@ -1213,12 +1221,14 @@ class App:
                 elif days > 0:
                     INJS[index][2].config(text = f'{days} Days', command = lambda: heal_countdown(days, index, inj_num))
                 elif days <= 0:
-                    INJS[index][2].config(text = 'Recover', command = lambda: heal_inj(index))
+                    INJS[index][2].config(text = 'Recover', command = lambda i = index: heal_inj(i))
                 self.injs[inj_num][5] = days
                 update_sheet()
 
         #Fully Heal
             def heal_inj(index):
+                print(index)
+                print(INJS[index][0])
                 self.injs.pop(INJS[index][0])
                 INJS[index][1].destroy()
                 INJS[index][2].destroy()
@@ -1447,7 +1457,7 @@ class App:
                 self.roll_nm.destroy()
                 self.dice_frame = ttk.Frame(frame, style = 'Dice.TFrame')
                 self.dice_frame.pack()
-                self.dice_label = ttk.Label(self.dice_frame, text = f'{key.upper()} ROLL', style =  'NewChar.Alien.TLabel')
+                self.dice_label = ttk.Label(self.dice_frame, text = f'{key.upper()} ROLL', style =  'NewChar.Alien.TLabel', background = '#182318')
                 self.dice_label.grid(row = 0, columnspan=12)
 
                 #Gatekeep: Synths can't push
@@ -1755,11 +1765,12 @@ class App:
         #Display the Dice
             def display_dice(list):
                 for i, dice in enumerate(list):
-                    ttk.Label(self.dice_frame, image = dicedict[dice], background = '#182318').grid(row = (i // 12)+1, column = i % 12)
+                    ttk.Label(self.dice_frame, image = dicedict[dice], background = '#182318').grid(row = (i // 13)+1, column = i % 13)
 
                 now = datetime.datetime.now()
                 time = now.strftime("Rolled on %m/%d/%Y, at %H:%M:%S")
-                ttk.Label(sheet, text = time, style = 'White.TLabel', background = '#182318').place(x = 320, y = 740, anchor = 'sw')
+                stamp = ttk.Label(sheet, text = time, style = 'White.TLabel', background = '#182318')
+                stamp.place(x = 320, y = 550, anchor = 'nw')
 
         #Deactivate Death Roll Button
             def deactivate_death():
@@ -1771,6 +1782,9 @@ class App:
 
                 death_time.config(text = '')
                 death_freq.config(foreground='#555555')
+
+                
+                sheet_bg.config(image = self.sheet_bg_normal)
 
     #Variables
         #region HEALTH BAR
@@ -2038,7 +2052,7 @@ class App:
     #Widgets
         #region SHEET FRAMES
             self.roll_frame = ttk.Frame(sheet, style = 'Dice.TFrame')
-            self.roll_frame.place(x = 305, y = 550, width = 740, height = 250, anchor = 'nw')
+            self.roll_frame.place(x = 305, y = 545, width = 740, height = 150, anchor = 'nw')
 
             self.dice_frame = ttk.Frame(self.roll_frame, style = 'Dice.TFrame')
             self.dice_label = ttk.Label(self.dice_frame, style = 'Dice.TFrame')
@@ -2124,7 +2138,7 @@ class App:
             ttk.Label(gear_frame, text = 'Gear', style = 'Inv.Alien.TLabel').grid(row = 0, sticky = 'w')
             ttk.Label(gear_frame, text = 'Weight', style = 'Inv.Alien.TLabel').grid(row = 0, column = 1)
             for g in GEAR:
-                GEAR[g][0] = ttk.Entry(gear_frame, foreground = 'Black', style = 'Alien.TEntry', font = ('Courier New', 12))
+                GEAR[g][0] = ttk.Entry(gear_frame, foreground = 'Black', style = 'Alien.TEntry', font = ('Courier New', 11))
                 GEAR[g][0].grid(row = g+1, column = 0, padx = 2, pady = 2)
                 GEAR[g][0].insert(0,dict['Gear'][g][0])
                 GEAR[g][0].config(state = DISABLED)
@@ -2153,10 +2167,10 @@ class App:
 
         #region NOTES
             notes_frame = ttk.Frame(sheet, style = 'Alien.TFrame')
-            notes_frame.place(x = 1200, y = 510, anchor = 'n')
+            # notes_frame.place(x = 1200, y = 510, anchor = 'n')
 
             ttk.Label(notes_frame, text = 'Notes', style = 'Inv.Alien.TLabel').grid(row = 14, column = 0, sticky = 'w')
-            self.notes = Text(notes_frame, width = 34, height = 17, wrap='word')
+            self.notes = Text(notes_frame, width = 34, height = 11, wrap='word')
             self.notes.grid(row = 15, column = 0, columnspan= 2)
             self.notes.insert("1.0", dict['Notes'])
             self.notes.config(state = 'disabled')
@@ -2272,7 +2286,9 @@ class App:
         #region CRITICAL INJURIES
 
             crit_frame = ttk.Frame(sheet, style = 'Alien.TFrame')
-            crit_frame.place(x = 5, y = 720)
+            crit_frame.place(x = 1200, y = 510, anchor = 'n')
+            
+            # notes_frame.place(x = 5, y = 720)
 
             ttk.Label(crit_frame, text = 'Critical Injuries', style = 'Inv.Alien.TLabel').grid(row = 0, column = 0)
 
@@ -2366,7 +2382,7 @@ class App:
             tal_frame.place(x = 910, y = 10)
 
             ttk.Label(tal_frame, text = 'Talents', style = 'Inv.Alien.TLabel').pack(padx = 5, anchor = 'w')
-            tal = Text(tal_frame, width = 16, height = 8)
+            tal = Text(tal_frame, width = 16, height = 7)
             tal.pack(padx = 5, pady = 5)
             for t in dict['Talents']:
                 i = dict['Talents'].index(t)
@@ -2377,34 +2393,34 @@ class App:
 
         #region DICE BUTTONS
             panic_bt = ttk.Label(sheet, image = panic_bt_inactive, background = aBlack)
-            panic_bt.place(x = 303, y = 748)
+            panic_bt.place(x = 303, y = 679)
 
             push_bt = ttk.Label(sheet, image = push_bt_inactive, background = aBlack)
-            push_bt.place(relx = 0.5,y = 748, anchor = 'n')
+            push_bt.place(relx = 0.5,y = 679, anchor = 'n')
 
             crit_bt = ttk.Label(sheet, image = inj_bt_inactive, background = aBlack)
-            crit_bt.place(x = 1048, y = 748, anchor = 'ne')
+            crit_bt.place(x = 1048, y = 679, anchor = 'ne')
 
             end_panic_bt = ttk.Label(sheet, image = end_panic_bt_inactive, background = aBlack)
-            end_panic_bt.place(x = 303, y = 800)
+            end_panic_bt.place(x = 303, y = 715)
             if self.panic > 0:
                 end_panic_bt.config(image = end_panic_bt_active)
                 end_panic_bt.bind('<ButtonPress>', lambda event: panic_end())
 
             death_bt = ttk.Label(sheet, image = death_bt_inactive, background= aBlack)
-            death_bt.place(x = 430, y = 800)
+            death_bt.place(x = 430, y = 715)
 
-            death_freq = ttk.Label(sheet, text = 'Frequency', foreground = '#555555', style = 'Inv.Alien.TLabel')
-            death_freq.place(x = 685, y = 802)
-            death_time = ttk.Label(sheet, style = 'Inv.Alien.TLabel')
-            death_time.place(x = 685, y = 822)
+            death_freq = ttk.Label(sheet, text = 'Frequency', foreground = '#555555', style = 'Inv.Alien.TLabel', font = ('Courier New', 10))
+            death_freq.place(x = 685, y = 715)
+            death_time = ttk.Label(sheet, style = 'Inv.Alien.TLabel', font = ('Courier New', 10))
+            death_time.place(x = 685, y = 732)
 
             resus_bt = ttk.Label(sheet, image = resus_bt_inactive, background = aBlack)
-            resus_bt.place(x = 923, y = 800, anchor = 'ne')
+            resus_bt.place(x = 923, y = 715, anchor = 'ne')
 
-            
             trauma_bt = ttk.Label(sheet, image = trauma_bt_inactive, background = aBlack)
-            trauma_bt.place(x = 1050, y = 800, anchor = 'ne')
+            trauma_bt.place(x = 1050, y = 715, anchor = 'ne')
+
     #Called Functions
             pack_injuries()
         #endregion

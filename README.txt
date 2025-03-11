@@ -1,4 +1,13 @@
-The Alien RPG Companion App Ver 1.1.0 - by Micah Popp - 2024
+The Alien RPG Companion App Ver 1.1.01 - by Micah Popp - 2025
+
+--CHANGELOG--
+Fixed some graphical errors
+Fixed error with Critical Injuries
+
+
+------------------------------------
+
+The Alien RPG Companion App Ver 1.1.0 - by Micah Popp - 2025
 
 Hello again!  this latest installment was a greater undertaking than previously expected!  What I imagined I could do in a week took me 136 hours!  lol
 Never the less, here are the changes - mostly just added an interactive character sheet
